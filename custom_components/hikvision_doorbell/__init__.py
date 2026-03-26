@@ -218,7 +218,7 @@ async def _register_lovelace_resource(hass: HomeAssistant) -> None:
         return
 
     # Register static path for the card
-    hass.http.register_static_path(card_url, card_path, cache_headers=True)
+    hass.http.async_register_static_paths([card_url, card_path, True])
     _LOGGER.info("Registered Hikvision Doorbell card at %s", card_url)
 
     # Add to Lovelace resources if not already present
