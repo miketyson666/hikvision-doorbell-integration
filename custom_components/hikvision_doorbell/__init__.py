@@ -214,7 +214,7 @@ async def _register_lovelace_resource(hass: HomeAssistant) -> None:
     card_url = "/hikvision_doorbell/hikvision-doorbell-card.js"
 
     if not os.path.isfile(card_path):
-        _LOGGER.debug("Card JS not found at %s, skipping auto-registration", card_path)
+        _LOGGER.debug("Card JS not found at %s, skipping auto-registration", card_path) 
         return
 
     # Register static path for the card
