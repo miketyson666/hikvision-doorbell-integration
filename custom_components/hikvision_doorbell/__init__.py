@@ -217,7 +217,7 @@ async def _register_lovelace_resource(hass: HomeAssistant) -> None:
         _LOGGER.debug("Card JS not found at %s, skipping auto-registration", card_path) 
         return
 
-    # Register static path for the card
+    # Register static path for the card Mod di Damiano
     hass.http.async_register_static_paths([card_url, card_path, True])
     _LOGGER.info("Registered Hikvision Doorbell card at %s", card_url)
 
